@@ -44,8 +44,12 @@ public class AddAndSearchWordDataStructure{
             }
         }
     }
+
+    public boolean search(String word){
+        return dfsSearch(root.children, word, 0);
+    }
     
-    public boolean dfsSearch(HashMap<Character, TrieNode> children, String word, int start) {
+    private boolean dfsSearch(HashMap<Character, TrieNode> children, String word, int start) {
         
         if(start == word.length()){
             if(children.size()==0) 
