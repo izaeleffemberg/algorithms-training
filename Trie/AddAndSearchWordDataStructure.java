@@ -1,17 +1,26 @@
+import java.util.HashMap;
+
 public class AddAndSearchWordDataStructure{
     public class TrieNode{
-        public TrieNode[] children;
-        boolean isWord;
-        String item = "";
-
-        TrieNode(){
-            children = TrieNode[26];
-            isWorld = false;
+        char character;
+        HashMap<Character, TrieNode> children = new HashMap<Character, TrieNode>();        
+        boolean isLeaf = false;
+        
+        TrieNode(){}
+        
+        TrieNode(char character){
+            this.character = character;
         }
     }
 
-    public TrieNode root = new TrieNode();
+    private TrieNode root;
 
+    public AddAndSearchWordDataStructure(){
+        root = new TrieNode();
+    }
+
+    public void add(String word){
+        
     }
 
 }
